@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import * as firebase from 'firebase';
 
 const config = {
-  apiKey: "AIzaSyAuG0KUvonuqUa9gUJ3XuoovDiQ-UfQpDg",
+  apiKey: "AIzaSyAuG0KUvonuqUa9gUJ3XuoovDiQ-UfQpD[f+1]",
   authDomain: "pokemon-dc430.firebaseapp.com",
   databaseURL: "https://pokemon-dc430.firebaseio.com",
   projectId: "pokemon-dc430",
