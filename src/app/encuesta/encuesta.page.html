@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Encuesta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="formEncuesta">
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-input type="name" formControlName="nombre" placeholder="Nombre"></ion-input>
+      <span *ngIf="formEncuesta.get('nombre').touched && formEncuesta.get('nombre').hasError('required') ">Required</span>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Edad:</ion-label>
+      <ion-input type="number" formControlName="edad" placeholder="Edad"></ion-input>
+      <span *ngIf="formEncuesta.get('edad').touched && formEncuesta.get('edad').hasError('required') ">Required</span>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+      <ion-select formControlName="sexo" okText="Okay" cancelText="Cancel">
+        <ion-select-option value="Masculino">Masculino</ion-select-option>
+        <ion-select-option value="Femenino">Femenino</ion-select-option>
+      </ion-select>
+      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ocupación</ion-label>
+      <ion-select formControlName="ocupacion" okText="Aceptar" cancelText="Cancelar">
+        <ion-select-option value="estudiante">Estudiante</ion-select-option>
+        <ion-select-option value="trabajador">Trabajador</ion-select-option>
+        <ion-select-option value="ocioso">Ocioso</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ciudad</ion-label>
+      <ion-select formControlName="ciudad" okText="Okay" cancelText="Cancelar">
+        <ion-select-option value="Chiapa de Corzo">Chiapa de Corzo</ion-select-option>
+        <ion-select-option value="Ocozocoautla">Ocozocoautla</ion-select-option>
+        <ion-select-option value="San Cristóbal">San Cristóbal</ion-select-option>
+        <ion-select-option value="San Fernando">San Fernando</ion-select-option>
+        <ion-select-option value="Soconusco">Soconusco</ion-select-option>
+        <ion-select-option value="Suchiapa">Suchiapa</ion-select-option>
+        <ion-select-option value="Tapachula">Tapachula</ion-select-option>
+        <ion-select-option value="Tonalá">Tonalá</ion-select-option>
+        <ion-select-option value="Tuxtla Gutiérrez">Tuxtla Gutiérrez</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-button type="button" (click)="guardar()" [disabled]="formEncuesta.invalid">Guardar</ion-button>
+  </form>
+
+
+</ion-content>
